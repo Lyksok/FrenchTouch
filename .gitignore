@@ -40,5 +40,4 @@ build/
 
 .cache/
 
-hibernate_local.cfg.xml.mv.db
-hibernate_local.cfg.xml.lock.db
+app.config
