@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+<BorderPane style="-fx-background-color: #1c1c1c; -fx-background-radius: 20" stylesheets="@styleSheet.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="epita.projectse.application.AdminRoleElementController">
+   <center>
+      <HBox alignment="CENTER_LEFT" prefHeight="61.0" prefWidth="555.0" spacing="25.0" style="-fx-background-color: #CCCCCC;">
+         <children>
+            <Label fx:id="emailLabel" prefHeight="61.0" styleClass="label-subtitle" text="userEmail@example.com" textOverrun="CLIP" wrapText="true">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+            <HBox alignment="CENTER_RIGHT" prefHeight="61.0" spacing="15.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Button fx:id="acceptButton" mnemonicParsing="false" text="Accept" />
+                  <Button fx:id="denyButton" mnemonicParsing="false" text="Deny" />
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="15.0" right="15.0" top="5.0" />
+         </padding>
+      </HBox>
+   </center>
+</BorderPane>

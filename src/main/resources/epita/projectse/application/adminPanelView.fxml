@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="430.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="930.0" style="-fx-background-color: #101010;" stylesheets="@styleSheet.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="epita.projectse.application.AdminPanelController">
+   <children>
+      <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="930.0">
+         <top>
+            <HBox alignment="CENTER" spacing="50.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label styleClass="label-title" text="Admin Panel">
+                     <font>
+                        <Font size="35.0" />
+                     </font>
+                  </Label>
+                  <Button mnemonicParsing="false" onAction="#refreshAll" prefHeight="30.0" text="Refresh" />
+               </children>
+            </HBox>
+         </top>
+         <left>
+            <TabPane prefHeight="200.0" prefWidth="470.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+              <tabs>
+                <Tab text="Collaborator">
+                     <content>
+                        <ScrollPane fitToWidth="true" hbarPolicy="NEVER" prefHeight="200.0" prefWidth="200.0" vbarPolicy="ALWAYS">
+                           <padding>
+                              <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                           </padding>
+                           <content>
+                              <VBox fx:id="collaboratorScrollPane" prefHeight="330.0" prefWidth="100.0" style="-fx-background-color: #101010; -fx-border-radius: 10;" />
+                           </content>
+                        </ScrollPane>
+                     </content>
+                </Tab>
+                <Tab text="Artist">
+                     <content>
+                        <ScrollPane fitToWidth="true" hbarPolicy="NEVER" prefHeight="200.0" prefWidth="200.0" vbarPolicy="ALWAYS">
+                           <padding>
+                              <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                           </padding>
+                           <content>
+                              <VBox fx:id="artistScrollPane" prefHeight="330.0" prefWidth="100.0" style="-fx-background-color: #101010; -fx-border-radius: 10" />
+                           </content>
+                        </ScrollPane>
+                     </content>
+                </Tab>
+                  <Tab text="Admin">
+                     <content>
+                        <ScrollPane fitToWidth="true" hbarPolicy="NEVER" prefHeight="200.0" prefWidth="200.0" vbarPolicy="ALWAYS">
+                           <padding>
+                              <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                           </padding>
+                           <content>
+                              <VBox fx:id="adminScrollPane" prefHeight="330.0" prefWidth="100.0" style="-fx-background-color: #101010; -fx-border-radius: 10" />
+                           </content>
+                        </ScrollPane>
+                     </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </left>
+         <right>
+            <TabPane prefHeight="200.0" prefWidth="470.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+               <tabs>
+                  <Tab text="New Song">
+                     <content>
+                        <ScrollPane fitToWidth="true" hbarPolicy="NEVER" prefHeight="200.0" prefWidth="200.0" vbarPolicy="ALWAYS">
+                           <padding>
+                              <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                           </padding>
+                           <content>
+                              <VBox fx:id="artistRequestScrollPane" prefHeight="330.0" prefWidth="100.0" style="-fx-background-color: #101010; -fx-border-radius: 10;" />
+                           </content>
+                        </ScrollPane>
+                     </content>
+                  </Tab>
+                  <Tab text="New Song &amp; Artist">
+                     <content>
+                        <ScrollPane fitToWidth="true" hbarPolicy="NEVER" prefHeight="200.0" prefWidth="200.0" vbarPolicy="ALWAYS">
+                           <padding>
+                              <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                           </padding>
+                           <content>
+                              <VBox fx:id="collaboratorRequestScrollPane" prefHeight="330.0" prefWidth="414.0" style="-fx-background-color: #101010; -fx-border-radius: 10;" />
+                           </content>
+                        </ScrollPane>
+                     </content>
+                  </Tab>
+               </tabs>
+            </TabPane>
+         </right>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </BorderPane>
+   </children>
+</Pane>

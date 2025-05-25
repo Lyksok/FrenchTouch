@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="430.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="930.0" style="-fx-background-color: #101010;" stylesheets="@styleSheet.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="epita.projectse.application.ProfileController">
+   <children>
+      <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="930.0">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         <left>
+            <VBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="500.0" prefWidth="310.0" spacing="10.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fx:id="profilePictureView" fitHeight="160.0" fitWidth="160.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label fx:id="userProfilePictureLabel" />
+                  <Button mnemonicParsing="false" onAction="#onChangePictureButtonClicked" prefHeight="30.0" prefWidth="160.0" text="Change Profile Picture" />
+                  <Label fx:id="outputText" wrapText="true" />
+               </children>
+               <padding>
+                  <Insets left="100.0" right="50.0" top="10.0" />
+               </padding>
+            </VBox>
+         </left>
+         <right>
+            <VBox alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="500.0" prefWidth="310.0" spacing="10.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="toCollaboratorButton" mnemonicParsing="false" onAction="#onBecomeCollaboratorButtonClicked" prefHeight="30.0" prefWidth="160.0" text="Become a Collaborator" />
+                  <Button fx:id="toArtistButton" mnemonicParsing="false" onAction="#onBecomeArtistButtonClicked" prefHeight="30.0" prefWidth="160.0" text="Become an Artist" />
+                  <Button fx:id="toAdminButton" mnemonicParsing="false" onAction="#onBecomeAdminButtonClicked" prefHeight="30.0" prefWidth="160.0" text="Become an Admin" />
+               </children>
+               <padding>
+                  <Insets left="50.0" right="100.0" top="10.0" />
+               </padding>
+            </VBox>
+         </right>
+         <center>
+            <VBox alignment="CENTER" prefWidth="310.0" spacing="10.0" BorderPane.alignment="CENTER">
+               <children>
+                  <StackPane fx:id="oldPasswordPane" prefHeight="0.0" prefWidth="100.0" VBox.vgrow="NEVER">
+                     <children>
+                        <PasswordField fx:id="oldPasswordField" promptText="Old Password" />
+                        <CheckBox fx:id="oldPasswordCheck" mnemonicParsing="false" StackPane.alignment="CENTER_RIGHT">
+                           <StackPane.margin>
+                              <Insets right="5.0" />
+                           </StackPane.margin>
+                        </CheckBox>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="newPasswordPane" prefHeight="0.0" prefWidth="100.0">
+                     <children>
+                        <PasswordField fx:id="newPasswordField" promptText="New Password" />
+                        <CheckBox fx:id="newPasswordCheck" mnemonicParsing="false" StackPane.alignment="CENTER_RIGHT">
+                           <StackPane.margin>
+                              <Insets right="5.0" />
+                           </StackPane.margin>
+                        </CheckBox>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="confirmPasswordPane" prefHeight="0.0" prefWidth="100.0">
+                     <children>
+                        <PasswordField fx:id="confirmPasswordField" promptText="Confirm Password" />
+                        <CheckBox fx:id="confirmPasswordCheck" mnemonicParsing="false" StackPane.alignment="CENTER_RIGHT">
+                           <StackPane.margin>
+                              <Insets right="5.0" />
+                           </StackPane.margin>
+                        </CheckBox>
+                     </children>
+                  </StackPane>
+                  <Button mnemonicParsing="false" onAction="#onChangePasswordButtonClicked" prefHeight="30.0" prefWidth="243.0" text="Change password" />
+               </children>
+               <padding>
+                  <Insets left="50.0" right="50.0" />
+               </padding>
+            </VBox>
+         </center>
+         <top>
+            <Label fx:id="welcomeText" styleClass="label-title" text="Welcome back {username}" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="42.0" />
+               </font>
+            </Label>
+         </top>
+      </BorderPane>
+   </children>
+</Pane>

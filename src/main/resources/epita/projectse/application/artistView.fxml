@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="930.0" style="-fx-background-color: #101010;" stylesheets="@styleSheet.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="epita.projectse.application.ArtistController">
+   <children>
+      <VBox prefHeight="430.0" prefWidth="930.0">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="940.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" style="-fx-background-color: #101010" prefHeight="127.0" prefWidth="596.0" spacing="35.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <ImageView fx:id="artistProfileImage" fitHeight="128.0" fitWidth="128.0" pickOnBounds="true" preserveRatio="true">
+                           <viewport>
+                              <Rectangle2D />
+                           </viewport>
+                           <image>
+                              <Image url="@../../../base_profile_pic.png" />
+                           </image>
+                        </ImageView>
+                        <VBox alignment="CENTER_LEFT" style="-fx-background-color: #101010" prefHeight="157.0" prefWidth="433.0">
+                           <children>
+                              <Label fx:id="artistNameLabel" styleClass="label-title" text="{ArtistName}">
+                                 <font>
+                                    <Font size="42.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="nbOfStreamsLabel" styleClass="label-subtitle" text="Nb. of Streams : {0}" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="128.0" prefWidth="144.0">
+                     <children>
+                        <ImageView fx:id="likedImage" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../unliked.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="150.0" right="100.0" top="10.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <ScrollPane fitToWidth="true" style="-fx-background-color: #101010" hbarPolicy="NEVER" prefHeight="210.0" prefWidth="940.0" VBox.vgrow="ALWAYS">
+               <content>
+                  <VBox prefHeight="446.0" prefWidth="924.0" style="-fx-background-color: #101010">
+                     <children>
+                        <ScrollPane fitToWidth="true" style="-fx-background-color: #101010" hbarPolicy="NEVER" VBox.vgrow="ALWAYS">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <content>
+                              <VBox fx:id="songVbox" style="-fx-background-color: #101010;" />
+                           </content>
+                        </ScrollPane>
+                        <ScrollPane fitToHeight="true" vbarPolicy="NEVER" VBox.vgrow="ALWAYS">
+                           <content>
+                              <HBox fx:id="albumHbox" style="-fx-background-color: #101010" alignment="CENTER_LEFT" fillHeight="false" spacing="25.0">
+                                 <padding>
+                                    <Insets left="50.0" right="50.0" />
+                                 </padding></HBox>
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </VBox>
+               </content>
+            </ScrollPane>
+         </children>
+      </VBox>
+   </children>
+</Pane>

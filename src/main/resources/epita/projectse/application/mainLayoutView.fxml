@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="contentPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #101010" stylesheets="@styleSheet.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="epita.projectse.application.MainLayoutController">
+   <top>
+        <ToolBar maxHeight="60.0" prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: #1c1c1c; -fx-background-radius: 20" styleClass="tool-bar" BorderPane.alignment="CENTER">
+            <items>
+            <HBox alignment="CENTER_LEFT" maxHeight="40.0" maxWidth="800.0" prefHeight="40.0" prefWidth="785.0" spacing="10.0">
+               <children>
+                  <StackPane prefHeight="30.0" prefWidth="30.0">
+                     <children>
+                        <ImageView fitHeight="24.0" fitWidth="24.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../settings_icon.png" />
+                           </image>
+                        </ImageView>
+                        <Button mnemonicParsing="false" onAction="#onShowSettingsButtonClicked" opacity="0.0" text="Button" />
+                     </children>
+                  </StackPane>
+                  <ImageView fitHeight="24.0" fitWidth="24.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../search_icon.png" />
+                     </image>
+                  </ImageView>
+                  <StackPane prefHeight="30.0" prefWidth="200.0">
+                     <children>
+                        <ComboBox fx:id="searchBarComboBox" prefHeight="30.0" prefWidth="200.0" />
+                            <TextField fx:id="searchBar" prefHeight="30.0" prefWidth="200.0" promptText="Search" styleClass="search-bar" />
+                     </children>
+                  </StackPane>
+                      <Button mnemonicParsing="false" onAction="#onFavouritesButtonClicked" prefHeight="30.0" prefWidth="100.0" text="Favs" />
+                  <Button mnemonicParsing="false" onAction="#onQueueButtonClicked" prefHeight="30.0" prefWidth="100.0" text="Queue" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" maxHeight="40.0" prefHeight="40.0" prefWidth="182.0" spacing="10.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#onLogoutButtonPressed" text="Logout" />
+                  <Button mnemonicParsing="false" onAction="#onQuitButtonPressed" text="Quit" />
+               </children>
+            </HBox>
+            </items>
+         <BorderPane.margin>
+            <Insets bottom="5" />
+         </BorderPane.margin>
+        </ToolBar>
+    </top>
+   <left>
+      <VBox fx:id="ViewVBoxContainer" maxHeight="520.0" maxWidth="60.0" minHeight="430.0" minWidth="60.0" prefHeight="520.0" prefWidth="60.0" style="-fx-background-color: #1c1c1c; -fx-background-radius: 20" BorderPane.alignment="TOP_CENTER">
+         <children>
+            <VBox alignment="TOP_CENTER" maxHeight="200.0" maxWidth="60.0" minHeight="95.0" minWidth="60.0" prefHeight="95.0" prefWidth="60.0" spacing="10">
+               <VBox.margin>
+                  <Insets top="10">
+                  </Insets>
+               </VBox.margin>
+               <children>
+                  <ImageView id="Profile" fx:id="profilePictureView" fitHeight="36.0" fitWidth="36.0" onMouseClicked="#onProfileButtonClicked" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fitHeight="36.0" fitWidth="36.0" onMouseClicked="#onAddPlaylistButtonPressed" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../plus_icon.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </VBox>
+            <VBox fx:id="viewVbox" alignment="BOTTOM_CENTER" maxWidth="60.0" minWidth="60.0" prefWidth="60.0" spacing="10.0" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets bottom="10">
+                  </Insets>
+               </VBox.margin>
+               <children>
+                  <ImageView id="Artist" fx:id="toArtistView" fitHeight="36.0" fitWidth="36.0" onMouseClicked="#onArtistButtonClicked" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../mic_icon.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView id="Collaborator" fx:id="toCollaboratorView" fitHeight="36.0" fitWidth="36.0" onMouseClicked="#onCollaboratorButtonClicked" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../collaborator_icon.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView id="Admin" fx:id="toAdminView" fitHeight="36.0" fitWidth="36.0" onMouseClicked="#onAdminButtonClicked" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../admin_icon.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="36.0" fitWidth="36.0" onMouseClicked="#onApplicationButtonClicked" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../back_icon.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <opaqueInsets>
+                  <Insets bottom="10.0" />
+               </opaqueInsets>
+               <padding>
+                  <Insets bottom="10.0" />
+               </padding>
+            </VBox>
+         </children>
+         <BorderPane.margin>
+            <Insets top="5" />
+         </BorderPane.margin>
+      </VBox>
+   </left>
+   <center>
+      <Pane prefHeight="612.0" prefWidth="933.0" BorderPane.alignment="CENTER" />
+   </center>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+</BorderPane>
