@@ -1,7 +1,7 @@
 # SE1 Project
 
 Team : French Touch <br>
-Members : Jans GUILLOPE, Hugo COHEN
+Members : [Lyksok](https://github.com/Lyksok), [Yoplyy](https://github.com/Yoplyy)
 
 Welcome to French Touch, a dynamic music streaming application designed to connect users with their favorite artists and discover new music seamlessly. Our platform offers a rich set of features tailored for users, artists, and administrators, ensuring a comprehensive and engaging music experience.
 
