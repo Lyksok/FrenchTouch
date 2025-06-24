@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="940.0" style="-fx-background-color: #101010;" stylesheets="@styleSheet.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="epita.projectse.application.QueueController">
+    <children>
+        <VBox prefHeight="430.0" prefWidth="930.0">
+            <children>
+                <HBox prefHeight="100.0" prefWidth="940.0">
+                    <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="127.0" prefWidth="596.0" spacing="35.0" HBox.hgrow="ALWAYS">
+                            <children>
+                                <ImageView fx:id="coverImage" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                    <viewport>
+                                        <Rectangle2D />
+                                    </viewport>
+                                    <image>
+                                        <Image url="@../../../add-queue.png" />
+                                    </image>
+                                </ImageView>
+                                  <Label styleClass="label-title" text="Song Queue">
+                                      <font>
+                                          <Font size="42.0" />
+                                      </font>
+                                  </Label>
+                            </children>
+                        </HBox>
+                    </children>
+                    <padding>
+                        <Insets bottom="10.0" left="150.0" right="100.0" top="10.0" />
+                    </padding>
+                    <VBox.margin>
+                        <Insets />
+                    </VBox.margin>
+                </HBox>
+                <ScrollPane fitToWidth="true" hbarPolicy="NEVER" VBox.vgrow="ALWAYS">
+                    <content>
+                        <VBox fx:id="songVbox" />
+                    </content>
+                    <VBox.margin>
+                        <Insets />
+                    </VBox.margin>
+                </ScrollPane>
+            </children>
+        </VBox>
+    </children>
+</Pane>

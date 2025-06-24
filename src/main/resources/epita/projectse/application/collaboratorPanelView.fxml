@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="430.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="930.0" style="-fx-background-color: #101010;" stylesheets="@styleSheet.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="epita.projectse.application.CollaboratorPanelController">
+   <children>
+      <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="940.0">
+         <bottom>
+            <ButtonBar buttonMinWidth="85.0" prefHeight="35.0" prefWidth="940.0" BorderPane.alignment="CENTER">
+              <buttons>
+                  <Label fx:id="dialogLabel" alignment="CENTER_RIGHT" prefHeight="18.0" prefWidth="898.0" wrapText="true" />
+                <Button fx:id="cancelButton" maxWidth="85.0" mnemonicParsing="false" onAction="#onCancelButtonClicked" prefHeight="30.0" prefWidth="85.0" text="Clear" />
+                  <Button fx:id="submitButton" maxWidth="85.0" mnemonicParsing="false" onAction="#onSubmitButtonClicked" prefHeight="30.0" prefWidth="85.0" text="Submit" />
+              </buttons>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+            </ButtonBar>
+         </bottom>
+         <top>
+            <Label styleClass="label-title" text="Collaborator Panel" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="40.0" />
+               </font>
+            </Label>
+         </top>
+         <left>
+            <VBox alignment="TOP_CENTER" prefHeight="348.0" prefWidth="310.0" spacing="10.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label alignment="CENTER" prefHeight="18.0" prefWidth="331.0" styleClass="label-subtitle" text="Artist info" />
+                  <HBox>
+                     <children>
+                        <StackPane prefHeight="30.0" prefWidth="270.0">
+                           <children>
+                              <ComboBox fx:id="artistSearchComboBox" prefHeight="30.0" prefWidth="270.0" StackPane.alignment="CENTER_LEFT" />
+                              <TextField fx:id="artistNameField" minHeight="-Infinity" prefHeight="30.0" prefWidth="270.0" promptText="Artist name*" StackPane.alignment="CENTER_LEFT" />
+                           </children>
+                        </StackPane>
+                     </children>
+                  </HBox>
+                  <TextArea fx:id="artistBiographyField" prefHeight="200.0" prefWidth="200.0" promptText="Artist biography" />
+                  <HBox alignment="CENTER_LEFT" prefHeight="80.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="selectArtistProfilePictureButton" mnemonicParsing="false" prefWidth="145.0" text="Select profile picture" />
+                        <Label fx:id="artistProfilePictureLabel" text="Label" />
+                     </children>
+                  </HBox>
+               </children>
+               <BorderPane.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </BorderPane.margin>
+               <padding>
+                  <Insets left="50.0" right="25.0" top="10.0" />
+               </padding>
+            </VBox>
+         </left>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         <center>
+            <VBox alignment="TOP_CENTER" prefWidth="310.0" spacing="10.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label alignment="CENTER" prefHeight="18.0" prefWidth="350.0" styleClass="label-subtitle" text="Song info" />
+                  <TextField fx:id="songTitleField" maxWidth="-Infinity" prefHeight="30.0" prefWidth="345.0" promptText="Song title*" />
+                  <DatePicker fx:id="songCreationDateField" prefHeight="30.0" prefWidth="345.0" promptText="Song creation date*" />
+                  <HBox alignment="CENTER_LEFT" prefHeight="80.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="selectSongTrackButton" mnemonicParsing="false" prefHeight="30.0" prefWidth="143.0" text="Select song track*" />
+                        <Label fx:id="songTrackLabel" text="Label" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="80.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="selectSongCoverButton" mnemonicParsing="false" prefHeight="30.0" prefWidth="144.0" text="Select song cover" />
+                        <Label fx:id="songCoverLabel" text="Label" />
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets left="25.0" right="25.0" top="10.0" />
+               </padding>
+               <BorderPane.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </BorderPane.margin>
+            </VBox>
+         </center>
+         <right>
+            <VBox alignment="TOP_CENTER" prefWidth="310.0" spacing="10.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label alignment="CENTER" prefHeight="18.0" prefWidth="350.0" styleClass="label-subtitle" text="Album Info" />
+                  <HBox>
+                     <children>
+                        <StackPane prefHeight="30.0" prefWidth="270.0">
+                           <children>
+                              <ComboBox fx:id="albumSearchComboBox" prefHeight="30.0" prefWidth="270.0" StackPane.alignment="CENTER_LEFT" />
+                              <TextField fx:id="albumNameField" minHeight="-Infinity" prefHeight="30.0" prefWidth="270.0" promptText="Album name*" StackPane.alignment="CENTER_LEFT" />
+                           </children>
+                        </StackPane>
+                     </children>
+                  </HBox>
+                  <DatePicker fx:id="albumCreationDateField" prefHeight="30.0" prefWidth="345.0" promptText="Album creation date*" />
+                  <HBox alignment="CENTER_LEFT" prefHeight="80.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="selectAlbumCoverButton" mnemonicParsing="false" prefHeight="30.0" prefWidth="144.0" text="Select album cover" />
+                        <Label fx:id="albumCoverLabel" text="Label" />
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets left="25.0" right="25.0" top="10.0" />
+               </padding>
+               <BorderPane.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </BorderPane.margin>
+            </VBox>
+         </right>
+      </BorderPane>
+   </children>
+</Pane>

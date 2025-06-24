@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="70.0" prefWidth="922.0" style="-fx-background-color: #1c1c1c; -fx-background-radius: 20" stylesheets="@styleSheet.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="epita.projectse.application.SongElementController">
+   <left>
+      <HBox alignment="CENTER_LEFT" prefWidth="400.0" spacing="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="songCover" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../empty-song-cover.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="songName" prefHeight="60.0" styleClass="label-title" text="{song}" textOverrun="WORD_ELLIPSIS" wrapText="true">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+         <BorderPane.margin>
+            <Insets left="5.0" />
+         </BorderPane.margin>
+         <padding>
+            <Insets bottom="5.0" top="5.0" />
+         </padding>
+      </HBox>
+   </left>
+   <center>
+      <HBox alignment="CENTER_LEFT" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="artistName" prefHeight="60.0" styleClass="label-subtitle" text="{artist}" textOverrun="WORD_ELLIPSIS" wrapText="true">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+         <padding>
+            <Insets left="15.0" right="15.0" />
+         </padding>
+      </HBox>
+   </center>
+   <right>
+      <HBox alignment="CENTER_RIGHT" BorderPane.alignment="CENTER">
+         <children>
+            <Pane fx:id="addCollectionPane" prefHeight="70.0" prefWidth="70.0">
+               <children>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="13.0" layoutY="16.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../add_collection.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="addQueuePane" prefHeight="70.0" prefWidth="70.0">
+               <children>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="12.0" layoutY="10.0" opacity="0.6" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../add-queue.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="addFavouritesPane" prefHeight="70.0" prefWidth="70.0">
+               <children>
+                  <ImageView fx:id="likeImage" fitHeight="40.0" fitWidth="40.0" layoutX="15.0" layoutY="15.0" opacity="0.6" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../unliked.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </HBox>
+   </right>
+</BorderPane>
