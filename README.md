@@ -6,7 +6,11 @@ Members : [Lyksok](https://github.com/Lyksok), [Yoplyy](https://github.com/Yoply
 Welcome to French Touch, a dynamic music streaming application designed to connect users with their favorite artists and discover new music seamlessly. Our platform offers a rich set of features tailored for users, artists, and administrators, ensuring a comprehensive and engaging music experience.
 
 # Configuration
-Before launching the application, you need to setup the `app.config` file with the correct server URL and PORT.
+Before launching the application, you need to setup the `app.config` file with the correct server URL and PORT. Here is an example of configuration file :
+```
+SERVER_ADDR=127.0.0.1
+SERVER_PORT=50000
+```
 
 # Server
 The French Touch client can connect to a database written in Rust using HTTPS connection. Here is the link of the repo : [link](https://github.com/Lyksok/FrenchTouchServer).
